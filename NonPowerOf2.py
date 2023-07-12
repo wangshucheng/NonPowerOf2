@@ -37,7 +37,7 @@ def resize_4_pic(dirpath):
 
             print( (w, h),'->',(nw,nh), f)
             log.write("%s | (%d,%d)-> (%d,%d)\n"%(f,w, h,nw,nh))
-            img = img.resize( (nw,nh), Image.ANTIALIAS)
+            img = img.resize( (nw,nh), Image.LANCZOS)
             img.save(f)
 
 if '__main__' == __name__:
